@@ -117,7 +117,7 @@ def get_data():
     file2 = open('names-roll.csv','r')
     names_lines  = file1.readlines()
     i += 0
-    print("Started printing")
+    #print("Started printing")
     for line in names_lines:
         temp = line.split(",")
         if i==0:
@@ -128,7 +128,7 @@ def get_data():
     
     file3 = open('subjects_master.csv','r')
     grades_lines  = file1.readlines()
-    print("Started printing")
+    #print("Started printing")
     i = 0
     for line in grades_lines:
         temp = line.split(",")
