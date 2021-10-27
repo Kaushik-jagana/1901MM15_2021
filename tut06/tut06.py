@@ -31,7 +31,7 @@ def regex_renamer():
 
 	 
 	 if webseries_num==1:
-		 os.chdir(".\correct_srt\Breaking Bad")
+		 os.chdir("./correct_srt/Breaking Bad")
 		 BB=os.listdir(os.getcwd())
 		 for B in BB:
 			 pattern=re.compile(r'.720p.BRip.Sujadir')
@@ -42,7 +42,7 @@ def regex_renamer():
 			 episode=re.findall(match_pattern2,B)
 			 os.rename(B,match_pattern1.sub("Season " + "".join(['0' for i in range( season_padding - len(episode))]) + season + " Episode " + "".join(['0' for i in range( episode_padding - len(episode))]) + episode))
 	 elif webseries_num==2:
-		 os.chdir(".\correct_srt\Game of Thrones")
+		 os.chdir("./correct_srt/Game of Thrones")
 		 files=os.listdir(os.getcwd())
 		 for file in files:
 			 show_name, episodes, srt_name = file.split(" - ")
