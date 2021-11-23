@@ -16,7 +16,7 @@ def get_data():
     for row in csvreader:
         rollnumber.add(row[0])
         rows.append(row)
-    print(rollnumber)
+    #print(rollnumber)
     #print(rows)
     
     Emptydict = {}
@@ -24,7 +24,7 @@ def get_data():
         Emptydict[row[0]]=[]
     for row in rows:
         Emptydict[row[0]].append(row)
-    print(len(Emptydict[rows[1][0]]),rows[1][0])        
+    #print(len(Emptydict[rows[1][0]]),rows[1][0])        
     file2 = open('subjects_master.csv','r')
     csvreader1 = csv.reader(file2)
     header2 = next(csvreader1)
