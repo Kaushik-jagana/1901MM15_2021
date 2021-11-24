@@ -24,7 +24,7 @@ def feedback_not_submitted():
 		for j in subs:
 			ltp = ltp_value[ltp_value['subno']==j]['ltp'].iloc[0]
 			ltp = [int(i) for i in ltp.split('-')]
-			bit_count = np.count_nonzero(ltp)
+			bit_count = np.count_nonzero(ltp.copy())
 
 			feedback_count = course_feedback[(course_feedback['stud_roll']==i) & (course_feedback['course_code']==j)].shape[0]
 
